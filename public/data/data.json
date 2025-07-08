@@ -1,0 +1,162 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "image": "https://i.ibb.co/v6DXdP4S/modern-sofa.jpg",
+            "text": "Modern Sofa",
+            "price": 299,
+            "category": "Furniture",
+            "inStock": true,
+            "material": "Fabric",
+            "roomType": "Living Room",
+            "style": "Modern",
+            "quantity": 1
+        },
+        {
+            "id": 2,
+            "image": "https://i.ibb.co/DHjyYc62/dining-table.jpg",
+            "text": "Dining Table",
+            "price": 89,
+            "category": "Furniture",
+            "inStock": false,
+            "material": "Wood",
+            "roomType": "Dining Room",
+            "style": "Rustic",
+            "quantity": 2
+        },
+        {
+            "id": 3,
+            "image": "https://i.ibb.co/VYXmpTL4/18966047.jpg",
+            "text": "Bar Stools",
+            "price": 149,
+            "category": "Furniture",
+            "inStock": false,
+            "material": "Glass",
+            "roomType": "Dining Room",
+            "style": "Modern",
+            "quantity": 1
+        },
+        {
+            "id": 4,
+            "image": "https://i.ibb.co/SDDRqYFn/4265811-16869.jpg",
+            "text": "Bed Frame",
+            "price": 499,
+            "category": "Furniture",
+            "inStock": true,
+            "material": "Leather",
+            "roomType": "Bedroom",
+            "style": "Traditional",
+            "quantity": 1
+        },
+        {
+            "id": 5,
+            "image": "https://i.ibb.co/99NnRBYh/2148811458.jpg",
+            "text": "Armchair",
+            "price": 399,
+            "category": "Furniture",
+            "inStock": true,
+            "material": "Wood",
+            "roomType": "Living Room",
+            "style": "Scandinavian",
+            "quantity": 1
+        },
+        {
+            "id": 6,
+            "image": "https://i.ibb.co/vx3zYY5j/2151972874.jpg",
+            "text": "Bookshelf",
+            "price": 129,
+            "category": "Decor",
+            "inStock": true,
+            "material": "Wood",
+            "roomType": "Office",
+            "style": "Minimalist",
+            "quantity": 1
+        },
+        {
+            "id": 7,
+            "image": "https://i.ibb.co/SX9YJCtx/wardrobe-closet.jpg",
+            "text": "Wardrobe Closet",
+            "price": 249,
+            "category": "Furniture",
+            "inStock": true,
+            "material": "Metal",
+            "roomType": "Bedroom",
+            "style": "Industrial",
+            "quantity": 1
+        },
+        {
+            "id": 8,
+            "image": "https://i.ibb.co/LWyMLmK/nightstand.jpg",
+            "text": "Nighstand",
+            "price": 39,
+            "category": "Lighting",
+            "inStock": true,
+            "material": "Metal",
+            "roomType": "Office",
+            "style": "Modern",
+            "quantity": 1
+        },
+        {
+            "id": 9,
+            "image": "https://i.ibb.co/tMj7Kc3Q/Kitchen-Island.jpg",
+            "text": "Kitchen Island",
+            "price": 349,
+            "category": "Furniture",
+            "inStock": false,
+            "material": "Leather",
+            "roomType": "Kitchen",
+            "style": "Traditional",
+            "quantity": 1
+        },
+        {
+            "id": 10,
+            "image": "https://i.ibb.co/2YKz2D2R/coffee-table.jpg",
+            "text": "Coffee Table",
+            "price": 99,
+            "category": "Furniture",
+            "inStock": true,
+            "material": "Rattan",
+            "roomType": "Living Room",
+            "style": "Bohemian",
+            "quantity": 1
+        },
+        {
+            "id": 11,
+            "image": "https://i.ibb.co/LD93mSJ5/living-room.jpg",
+            "text": "TV Stand",
+            "price": 179,
+            "category": "Furniture",
+            "inStock": true,
+            "material": "Fabric",
+            "roomType": "Living Room",
+            "style": "Mid-Century",
+            "quantity": 1
+        },
+        {
+            "id": 12,
+            "image": "https://i.ibb.co/xtzG6KNy/kitchen-cabinet.jpg",
+            "text": "Kitchen Cabinet",
+            "price": 69,
+            "category": "Furniture",
+            "inStock": true,
+            "material": "Fabric",
+            "roomType": "Kitchen",
+            "style": "Modern",
+            "quantity": 1
+        }
+    ],
+    "categories": [
+        {
+            "image": "https://i.ibb.co/LD93mSJ5/living-room.jpg",
+            "buttonText": "Living Room"
+        },
+        {
+            "image": "https://i.ibb.co/xtzG6KNy/kitchen-cabinet.jpg",
+            "buttonText": "Bed Room"
+        },
+        {
+            "image": "https://i.ibb.co/tMj7Kc3Q/Kitchen-Island.jpg",
+            "buttonText": "Kitchen"
+        }
+    ]
+}
