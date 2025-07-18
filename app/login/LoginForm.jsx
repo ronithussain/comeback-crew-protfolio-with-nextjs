@@ -26,8 +26,8 @@ export default function LoginForm() {
             });
             if (response.ok) {
                 toast.success("Log In Successfully");
-                router.push("/");
                 form.reset();
+                router.push("/");
             } else {
                 toast.error("Authentication Failed")
             }

@@ -27,7 +27,7 @@ const NavBar = () => {
     const wishlistItems = useSelector((state) => state.wishlist.items);
     const wishlistItemCount = wishlistItems.length;
     return (
-        <nav className='sticky top-0 z-50 bg-slate-200 sm:px-6 px-1 py-4 flex items-center justify-between'>
+        <nav className='sticky top-0 z-50 bg-slate-200 sm:px-6 px-1 py-2 flex items-center justify-between'>
             {/* left section: logo */}
             <div className=' flex flex-col leading-tight'>
                 <Link href={"/"}>
@@ -104,14 +104,23 @@ const NavBar = () => {
                     <ul className="menu menu-horizontal px-1 hidden sm:block">
                         {status == "authenticated" ? (
                             <>
-                                <ul className="flex items-center">
+                                <ul className="flex items-center gap-x-1">
                                     <li>
-                                        <Image
-                                            className="rounded-full"
-                                            src={session?.user?.image} alt="user-logo"
-                                            width={80}
-                                            height={80} />
+                                        {session?.user?.image ? (
+                                            <Image
+                                                className="rounded-full"
+                                                src={session?.user?.image}
+                                                alt="user-logo"
+                                                width={80}
+                                                height={80}
+                                            />
+                                        ) : (
+                                            <div className="bg-[#a91f64] text-white rounded-full w-10 h-10 flex items-center justify-center text-sm font-bold uppercase">
+                                                {session?.user?.name?.charAt(0)}
+                                            </div>
+                                        )}
                                     </li>
+
                                     <li
                                         className="cursor-pointer hover:text-[#a91f64] transition duration-500 text-gray-700 font-medium"
                                         onClick={() => signOut()}>
@@ -147,38 +156,47 @@ const NavBar = () => {
 
             {/* mobile section: menu */}
             {isMenuOpen && (
-
                 <ul className="absolute top-full left-0 w-full bg-white flex flex-col items-center gap-4 py-4 text-gray-700 font-medium md:hidden shadow-md">
 
                     <li>
-                        <Link href="/" onClick={toggleMenu} className="hover:text-[#a91f64] transition duration-500">
+                        <Link href="/" onClick={toggleMenu}
+                            className={`hover:text-[#a91f64] transition duration-300 ${pathname === '/' ? 'text-[#a91f64] font-semibold underline' : ''
+                                }`}>
                             Home
                         </Link>
                     </li>
-                    <li>
-                        <Link href="/new-arrivals" onClick={toggleMenu} className="hover:text-[#a91f64] transition duration-500">
+                    {/* <li>
+                        <Link href="/new-arrivals" onClick={toggleMenu} 
+                        className={`hover:text-[#a91f64] transition duration-300 ${pathname === '/new-arrivals' ? 'text-[#a91f64] font-semibold underline' : ''
+                            }`}>
                             New Arrivals
                         </Link>
-                    </li>
+                    </li> */}
                     <li>
-                        <Link href="/top-sellers" onClick={toggleMenu} className="hover:text-[#a91f64] transition duration-500">
-                            Top Sellers
+                        <Link href="/my-booking" onClick={toggleMenu}
+                            className={`hover:text-[#a91f64] transition duration-300 ${pathname === '/my-booking' ? 'text-[#a91f64] font-semibold underline' : ''
+                                }`}>
+                            My Bookings
                         </Link>
                     </li>
                     <li>
-                        <Link href="/products" onClick={toggleMenu} className="hover:text-[#a91f64] transition duration-500">
+                        <Link href="/products" onClick={toggleMenu}
+                            className={`hover:text-[#a91f64] transition duration-300 ${pathname === '/products' ? 'text-[#a91f64] font-semibold underline' : ''
+                                }`}>
                             Products
                         </Link>
                     </li>
 
                     {/*  Login / Register buttons */}
                     <li>
-                        <Link href="/register" onClick={toggleMenu} className="hover:text-[#a91f64] transition duration-500">
+                        <Link href="/register" onClick={toggleMenu}
+                            className="hover:text-[#a91f64] transition duration-500">
                             Register
                         </Link>
                     </li>
                     <li>
-                        <Link href="/login" onClick={toggleMenu} className="hover:text-[#a91f64] transition duration-500">
+                        <Link href="/login" onClick={toggleMenu}
+                            className="hover:text-[#a91f64] transition duration-500">
                             Login
                         </Link>
                     </li>

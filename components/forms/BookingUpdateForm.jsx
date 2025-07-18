@@ -39,7 +39,7 @@ const BookingUpdateForm = ({ data }) => {
     };
     console.log(bookingPayload);
 
-    const res = await fetch(`http://localhost:3000/api/my-bookings/${data._id}`, {
+    const res = await fetch(`https://comeback-crew-ecommerce-portfolio.vercel.app/api/my-bookings/${data._id}`, {
       method: "PATCH",
       body: JSON.stringify(bookingPayload)
     });

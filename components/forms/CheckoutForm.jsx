@@ -38,7 +38,7 @@ const CheckoutForm = ({ data }) => {
     };
     console.log(bookingPayload);
 
-    const res = await fetch("http://localhost:3000/api/service", {
+    const res = await fetch("https://comeback-crew-ecommerce-portfolio.vercel.app/api/service", {
       method: "POST",
       body: JSON.stringify(bookingPayload)
     });

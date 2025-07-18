@@ -33,12 +33,12 @@ export default function SocialLogin() {
             >
                 <FaGoogle role="button" />
             </p>
-            <p
+            {/* <p
                 onClick={() => handleSocialLogin("github")}
                 className="bg-slate-200 rounded-full p-3"
             >
                 <FaGithub role="button" />
-            </p>
+            </p> */}
         </div>
     );
 }

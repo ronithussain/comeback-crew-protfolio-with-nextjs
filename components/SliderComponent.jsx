@@ -23,7 +23,7 @@ const SliderComponent = () => {
             <Slider {...settings}>
                 {slides.map((slide, index) => (
                     <div key={index} className='relative'>
-                        <div className='relative w-full h-[900px]'>
+                        <div className='relative w-full h-[750px]'>
                             <Image src={slide} alt='' fill className='rounded-3xl' />
                             {/* dark overlay at the image */}
                             <div className='absolute inset-0 bg-black opacity-30 rounded-3xl'></div>

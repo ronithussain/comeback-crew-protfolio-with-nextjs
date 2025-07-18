@@ -34,7 +34,7 @@ const ServicesSection = async () => {
               </figure>
               <div className="flex justify-between items-center mt-4">
                 <div>
-                  <h2 className="font-bold text-xl">{item.title}</h2>
+                  <h2 className="font-bold text-xl">{item.text}</h2>
                   <p className="font-bold text-xl text-[#A91F64]">
                     Price : ${item.price}
                   </p>

@@ -2,18 +2,48 @@
 
 import Link from "next/link";
 import { registerUser } from "../action/auth/registerUser";
+import { useRouter } from "next/navigation";
 import SocialLogin from "../login/SocialLogin";
+import toast from "react-hot-toast";
+import { signIn } from "next-auth/react";
 
 export default function RegisterForm() {
+  const router = useRouter();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const name = form.name.value;
-    const email = form.email.value;
-    const password = form.password.value;
-    await registerUser({ name, email, password })
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const name = form.name.value;
+  const email = form.email.value;
+  const password = form.password.value;
+
+  try {
+    const response = await registerUser({
+      name,
+      email,
+      password,
+    });
+
+    if (response?.success) {
+      // ✅ auto login after successful registration
+      await signIn("credentials", {
+        email,
+        password,
+        redirect: false,
+      });
+
+      toast.success("Registration successful!");
+      form.reset();
+      router.push("/");
+    } else {
+      toast.error(response?.message || "Registration failed");
+    }
+  } catch (err) {
+    toast.error("Something went wrong");
+    console.log(err);
   }
+}
+
 
   return (
     <div>
@@ -30,6 +60,7 @@ export default function RegisterForm() {
             placeholder="Type here"
             className="input input-bordered w-full"
             name="name"
+            required
           />
         </div>
 
@@ -38,8 +69,9 @@ export default function RegisterForm() {
             <span className="label-text font-bold">Email</span>
           </label>
           <input
-            type="text"
+            type="email"
             name="email"
+            required
             placeholder="Type here"
             className="input input-bordered w-full"
           />
@@ -52,6 +84,8 @@ export default function RegisterForm() {
           <input
             type="password"
             name="password"
+            required
+            minLength={6}
             placeholder="Type here"
             className="input input-bordered w-full"
           />
@@ -71,10 +105,6 @@ export default function RegisterForm() {
           </Link>
         </p>
       </form>
-
-
-
-
     </div>
   );
 }
